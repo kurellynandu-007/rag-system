@@ -1,0 +1,28 @@
+# RAG System – Required Packages
+# Python 3.11 | CPU-only | No GPU/CUDA | No local LLM download
+# Verified on 2026-10-19
+#
+# Install inside the project virtual environment ONLY:
+#   python -m venv .venv
+#   .venv\Scripts\activate        (Windows)
+#   pip install -r requirements.txt
+
+# ── Vector store ──────────────────────────────────────────────────────────────
+chromadb==1.5.9
+
+# ── Embeddings (CPU-only; model ~90 MB downloaded on first run) ───────────────
+sentence-transformers==2.7.0
+transformers==4.39.3
+tokenizers>=0.14,<0.21
+
+# ── PDF text extraction ───────────────────────────────────────────────────────
+pypdf==5.1.0
+
+# ── Google Gemini API (cloud inference – no local model download) ─────────────
+google-genai==1.14.0
+
+# ── Web UI ────────────────────────────────────────────────────────────────────
+streamlit==1.66.0
+
+# ── Environment variable management ──────────────────────────────────────────
+python-dotenv==1.0.1
